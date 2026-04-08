@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Flights App</string>
+    <string name="login_welcome_title">Bienvenido de\nNuevo</string>
+    <string name="login_welcome_subtitle">Ingrese sus credenciales para acceder a su cuenta</string>
+    <string name="placeholder_email">Correo</string>
+    <string name="placeholder_password">Contraseña</string>
+    <string name="button_login">Iniciar Sesión</string>
+    <string name="login_footer_no_account">¿No tienes una cuenta? </string>
+    <string name="login_footer_register">Registrate</string>
+
+    <string name="signup_title">Crea tu\ncuenta</string>
+    <string name="placeholder_name">Nombre</string>
+    <string name="placeholder_phone">Teléfono</string>
+    <string name="placeholder_confirm_password">Confirmar contraseña</string>
+    <string name="button_signup">Registrarse</string>
+    <string name="signup_footer_account">¿Ya tienes una cuenta? </string>
+    <string name="signup_footer_login">Inicia sesión</string>
 </resources>

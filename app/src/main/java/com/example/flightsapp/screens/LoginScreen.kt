@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -49,7 +50,7 @@ fun LoginScreen(navController: NavController) {
                     .padding(30.dp)
             ) {
                 Text(
-                    text = "Welcome\nBack",
+                    text = stringResource(R.string.login_welcome_title),
                     color = Color.White,
                     fontSize = 32.sp,
                     fontWeight = FontWeight.Bold
@@ -58,7 +59,7 @@ fun LoginScreen(navController: NavController) {
                 Spacer(modifier = Modifier.height(14.dp))
 
                 Text(
-                    text = "Enter your credentials to access your account",
+                    text = stringResource(R.string.login_welcome_subtitle),
                     color = Color.White,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold
@@ -86,7 +87,7 @@ fun LoginScreen(navController: NavController) {
             CustomInput(
                 value = email,
                 onValueChange = { email = it },
-                placeHolder = "Email"
+                placeHolder = R.string.placeholder_email
             )
 
             Spacer(modifier = Modifier.height(30.dp))
@@ -94,14 +95,14 @@ fun LoginScreen(navController: NavController) {
             CustomInput(
                 value = password,
                 onValueChange = { password = it },
-                placeHolder = "Password",
+                placeHolder = R.string.placeholder_password,
                 isPassword = true
             )
 
             Spacer(modifier = Modifier.height(40.dp))
 
             CustomButton(
-                text = "LOGIN",
+                text = R.string.button_login,
                 onClick = { }
             )
 
@@ -111,13 +112,13 @@ fun LoginScreen(navController: NavController) {
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Don't have an account? ",
+                    text = stringResource(R.string.login_footer_no_account) + " ",
                     color = Color(0XFF235347),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Light
                 )
                 Text(
-                    text = "Register",
+                    text = stringResource(R.string.login_footer_register),
                     color = Color(0XFF235347),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,

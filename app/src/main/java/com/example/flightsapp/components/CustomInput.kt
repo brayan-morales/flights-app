@@ -12,6 +12,7 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -19,11 +20,12 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.flightsapp.R
 
 @Composable
 fun CustomInput(
     value: String,
-    placeHolder: String,
+    placeHolder: Int,
     isPassword: Boolean = false,
     onValueChange: (String)-> Unit)
 {
@@ -51,7 +53,7 @@ fun CustomInput(
                 Box(modifier = Modifier.fillMaxWidth()) {
                     if (value.isEmpty()) {
                         BasicText(
-                            text = placeHolder,
+                            text = stringResource(placeHolder),
                             style = TextStyle(
                                 color = Color(0xFF235347),
                                 fontSize = 18.sp,
@@ -78,5 +80,5 @@ fun CustomInput(
 @Preview(showBackground = true)
 @Composable
 fun CustomInputPreview(){
-    CustomInput( "", "Email", onValueChange = {})
+    CustomInput( "", R.string.placeholder_email, onValueChange = {})
 }

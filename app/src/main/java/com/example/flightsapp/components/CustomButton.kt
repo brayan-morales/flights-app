@@ -14,14 +14,16 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.flightsapp.R
 
 @Composable
-fun CustomButton(text: String, onClick: ()-> Unit) {
+fun CustomButton(text: Int, onClick: ()-> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -38,7 +40,7 @@ fun CustomButton(text: String, onClick: ()-> Unit) {
         contentAlignment = Alignment.Center
     ){
         BasicText(
-            text=  text,
+            text= stringResource(text),
             style = TextStyle(
                 color= Color.White,
                 fontSize = 20.sp,
@@ -51,5 +53,5 @@ fun CustomButton(text: String, onClick: ()-> Unit) {
 @Preview(showBackground = true)
 @Composable
 fun CustomButtonPreview(){
-    CustomButton("LOGIN", {})
+    CustomButton(R.string.button_login, {})
 }

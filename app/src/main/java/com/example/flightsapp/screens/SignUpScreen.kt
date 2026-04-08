@@ -9,12 +9,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.flightsapp.R
 import com.example.flightsapp.components.CustomButton
 import com.example.flightsapp.components.CustomInput
 
@@ -60,7 +62,7 @@ fun SignUpScreen(navController: NavController) {
         ) {
 
             Text(
-                text = "Create your\naccount",
+                text = stringResource(R.string.signup_title),
                 fontSize = 36.sp,
                 fontWeight = FontWeight.Bold
             )
@@ -70,7 +72,7 @@ fun SignUpScreen(navController: NavController) {
             CustomInput(
                 value = name,
                 onValueChange = { name = it },
-                placeHolder = "Name"
+                placeHolder = R.string.placeholder_name
             )
 
             Spacer(modifier = Modifier.height(30.dp))
@@ -78,7 +80,7 @@ fun SignUpScreen(navController: NavController) {
             CustomInput(
                 value = email,
                 onValueChange = { email = it },
-                placeHolder = "Email"
+                placeHolder = R.string.placeholder_email
             )
 
             Spacer(modifier = Modifier.height(30.dp))
@@ -86,7 +88,7 @@ fun SignUpScreen(navController: NavController) {
             CustomInput(
                 value = phone,
                 onValueChange = { phone = it },
-                placeHolder = "Phone"
+                placeHolder = R.string.placeholder_phone
             )
 
             Spacer(modifier = Modifier.height(30.dp))
@@ -94,7 +96,7 @@ fun SignUpScreen(navController: NavController) {
             CustomInput(
                 value = password,
                 onValueChange = { password = it },
-                placeHolder = "Password",
+                placeHolder = R.string.placeholder_password,
                 isPassword = true
             )
 
@@ -103,14 +105,14 @@ fun SignUpScreen(navController: NavController) {
             CustomInput(
                 value = confirmPassword,
                 onValueChange = { confirmPassword = it },
-                placeHolder = "Confirmar Contraseña",
+                placeHolder = R.string.placeholder_confirm_password,
                 isPassword = true
             )
 
             Spacer(modifier = Modifier.height(40.dp))
 
             CustomButton(
-                text = "SIGN UP",
+                text = R.string.button_signup,
                 onClick = { navController.navigate("login") }
             )
 
@@ -120,13 +122,13 @@ fun SignUpScreen(navController: NavController) {
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Already have an account? ",
+                    text = stringResource(R.string.signup_footer_account) + " ",
                     color = Color(0XFF235347),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Light
                 )
                 Text(
-                    text = "Login",
+                    text = stringResource(R.string.signup_footer_login),
                     color = Color(0XFF235347),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
